@@ -4,6 +4,7 @@ Module.register("trainInfo", {
 		text: "trainInfo",
 	},
     info:{
+        "status": "遅延あり",
         "lines": [
           {
             "name": "山手線",
@@ -26,8 +27,6 @@ Module.register("trainInfo", {
 	start: function() {
 		var webSocket = new WebSocket("ws://127.0.0.1:5001");
         var self = this;
-
-        self.config.text = "常磐線 10分遅延 人身事故<br>上野東京ライン 20分遅延 線路内立ち入り"
 
         webSocket.onopen = function(message){
             Log.info(webSocket);
@@ -57,6 +56,10 @@ Module.register("trainInfo", {
     
 	getDom: function () {
         var wrapper = document.createElement("div");
+        if(this.info.status == "平常運転"){
+            wrapper.innerHTML = "現在、遅延はありません。";
+            return wrapper;
+        }
         const createRow = (name,states,details) => {
             const row = document.createElement("tr");
             const cell = document.createElement("td");
