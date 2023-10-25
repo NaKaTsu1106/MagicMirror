@@ -2,6 +2,7 @@ Module.register("trainInfo", {
 	// Default module config.
 	defaults: {
 		text: "trainInfo",
+        show: true,
 	},
     info:{
         "status": "遅延あり",
@@ -25,7 +26,7 @@ Module.register("trainInfo", {
       },
 
 	start: function() {
-		var webSocket = new WebSocket("ws://127.0.0.1:5001");
+		var webSocket = new WebSocket("ws://127.0.0.1:5003");
         var self = this;
 
         webSocket.onopen = function(message){
@@ -55,6 +56,7 @@ Module.register("trainInfo", {
     */
     
 	getDom: function () {
+        if(!this.config.show) return document.createElement("div");
         var wrapper = document.createElement("div");
         if(this.info.status == "平常運転"){
             wrapper.innerHTML = "現在、遅延はありません。";
@@ -96,6 +98,14 @@ Module.register("trainInfo", {
 
         wrapper.appendChild(table);
         return wrapper;
+    },
+
+    notificationReceived: function(notification, payload, sender) {
+        Log.info(notification);
+        if(notification == "FACE_DETECT"){
+            this.config.show = payload.isDetected;
+            this.updateDom(1000);
+        }
     }
     
 });
