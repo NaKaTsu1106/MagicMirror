@@ -1,4 +1,4 @@
-Module.register("faceRecogniton", {
+Module.register("faceRecognition", {
 	// Default module config.
 	defaults: {
 		text: "faceRecogniton running...",
@@ -25,19 +25,17 @@ Module.register("faceRecogniton", {
             Log.info(data.isDetected);
             if(data.isDetected){
                 self.config.text = "こんにちは";
+                self.sendNotification("FACE_DETECT", {isDetected : true });
             }else{
                 self.config.text = "さようなら";
+                self.sendNotification("FACE_DETECT", {isDetected : false });
             }
             self.updateDom(1000);
-        };
-
-        const interval = () => {
-            self.sendNotification("faceRecogniton", {isUserDetected : false, isUserKnown : false, name : "名無し"});
         };
 	},
 	
 	getTemplate: function () {
-        return "faceRecogniton.njk";
+        return "faceRecognition.njk";
 	},
 	
 
