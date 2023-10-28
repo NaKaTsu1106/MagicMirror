@@ -4,7 +4,12 @@ module.exports = NodeHelper.create({
 	// Override start method.
 	start: function () {
 		Log.log(`Starting node helper for: ${this.name}`);
-		this.fetchers = [];
-        Log.info(this.config);
+	},
+	// Override socketNotificationReceived received.
+	socketNotificationReceived: function (notification, payload) {
+		if(notification === "REQUEST"){
+			const data = require("./" + payload + ".json");
+			this.sendSocketNotification("RESPONSE", data);
+		}
 	},
 });
