@@ -1,0 +1,378 @@
+[
+    {
+        "period": "1",
+        "classes": {
+            "月曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "火曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "水曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "木曜日": {
+                "class_name": "英語演習Ｆ (2021年以前入学生対象・AJ/AD)",
+                "instructor": "山本　梓",
+                "location": "【千住】5号館5505防音教室",
+                "class_code": "11L0122506",
+                "credit": "1.0単位"
+            },
+            "金曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "土曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            }
+        }
+    },
+    {
+        "period": "2",
+        "classes": {
+            "月曜日": {
+                "class_name": "挑戦型プロジェクト",
+                "instructor": "阿倍　博信",
+                "location": "【千住】5号館5911AJ科ネットクラスルーム(A)",
+                "class_code": "1110233801",
+                "credit": "4.0単位"
+            },
+            "火曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "水曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "木曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "金曜日": {
+                "class_name": "挑戦型プロジェクト",
+                "instructor": "阿倍　博信",
+                "location": "【千住】5号館5911AJ科ネットクラスルーム(A)",
+                "class_code": "1110233801",
+                "credit": "4.0単位"
+            },
+            "土曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            }
+        }
+    },
+    {
+        "period": "3",
+        "classes": {
+            "月曜日": {
+                "class_name": "情報システム工学実験II",
+                "instructor": "松井　加奈絵",
+                "location": "【千住】5号館5911AJ科ネットクラスルーム(A)",
+                "class_code": "1110222801",
+                "credit": "2.0単位"
+            },
+            "火曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "水曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "木曜日": {
+                "class_name": "ネットワークセキュリティ",
+                "instructor": "八槇　博史",
+                "location": "【千住】5号館5403教室",
+                "class_code": "1109942801",
+                "credit": "3.0単位"
+            },
+            "金曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "土曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            }
+        }
+    },
+    {
+        "period": "4",
+        "classes": {
+            "月曜日": {
+                "class_name": "情報システム工学実験II",
+                "instructor": "松井　加奈絵",
+                "location": "【千住】5号館5911AJ科ネットクラスルーム(A)",
+                "class_code": "1110222801",
+                "credit": "2.0単位"
+            },
+            "火曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "水曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "木曜日": {
+                "class_name": "ネットワークセキュリティ",
+                "instructor": "八槇　博史",
+                "location": "【千住】5号館5403教室",
+                "class_code": "1109942801",
+                "credit": "3.0単位"
+            },
+            "金曜日": {
+                "class_name": "情報化社会と法規",
+                "instructor": "上野　洋一郎",
+                "location": "【千住】2号館2503教室",
+                "class_code": "1109912801",
+                "credit": "2.0単位"
+            },
+            "土曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            }
+        }
+    },
+    {
+        "period": "5",
+        "classes": {
+            "月曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "火曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "水曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "木曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "金曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "土曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            }
+        }
+    },
+    {
+        "period": "6",
+        "classes": {
+            "月曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "火曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "水曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "木曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "金曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "土曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            }
+        }
+    },
+    {
+        "period": "7",
+        "classes": {
+            "月曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "火曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "水曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "木曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "金曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "土曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            }
+        }
+    },
+    {
+        "period": "8",
+        "classes": {
+            "月曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "火曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "水曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "木曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "金曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            },
+            "土曜日": {
+                "class_name": null,
+                "instructor": null,
+                "location": null,
+                "class_code": null,
+                "credit": null
+            }
+        }
+    }
+]
