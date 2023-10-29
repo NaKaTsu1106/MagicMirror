@@ -34,7 +34,9 @@ Module.register("clock", {
 		showSunTimes: false,
 		showMoonTimes: false,
 		lat: 47.630539,
-		lon: -122.344147
+		lon: -122.344147,
+
+		show : true,
 	},
 	// Define required scripts.
 	getScripts: function () {
@@ -95,6 +97,7 @@ Module.register("clock", {
 	},
 	// Override dom generator.
 	getDom: function () {
+		if(!this.config.show) return document.createElement("div");
 		const wrapper = document.createElement("div");
 		wrapper.classList.add("clock-grid");
 
@@ -302,5 +305,13 @@ Module.register("clock", {
 
 		// Return the wrapper to the dom.
 		return wrapper;
-	}
+	},
+	notificationReceived: function(notification, payload, sender) {
+        if(notification == "FACE_DETECT"){
+			if(payload.isDetected != this.config.show){
+            	this.config.show = payload.isDetected;
+            	this.updateDom(1000);
+			}
+        }
+    }
 });

@@ -46,7 +46,9 @@ Module.register("weather", {
 		onlyTemp: false,
 		colored: false,
 		absoluteDates: false,
-		hourlyForecastIncrements: 1
+		hourlyForecastIncrements: 1,
+
+		show : true,
 	},
 
 	// Module properties.
@@ -102,6 +104,12 @@ Module.register("weather", {
 
 	// Override notification handler.
 	notificationReceived: function (notification, payload, sender) {
+		if(notification == "FACE_DETECT"){
+			if(payload.isDetected != this.config.show){
+            	this.config.show = payload.isDetected;
+            	this.updateDom(1000);
+			}
+        }
 		if (notification === "CALENDAR_EVENTS") {
 			const senderClasses = sender.data.classes.toLowerCase().split(" ");
 			if (senderClasses.indexOf(this.config.calendarClass.toLowerCase()) !== -1) {
@@ -127,6 +135,9 @@ Module.register("weather", {
 
 	// Select the template depending on the display type.
 	getTemplate: function () {
+		if(!this.config.show){
+			return "<div></div>"
+		}
 		switch (this.config.type.toLowerCase()) {
 			case "current":
 				return "current.njk";
