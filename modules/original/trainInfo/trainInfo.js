@@ -26,8 +26,10 @@ Module.register("trainInfo", {
       },
 
 	start: function() {
-		var webSocket = new WebSocket("ws://127.0.0.1:5003");
         var self = this;
+        /*
+		var webSocket = new WebSocket("ws://127.0.0.1:5003");
+        
 
         webSocket.onopen = function(message){
             Log.info(webSocket);
@@ -48,12 +50,8 @@ Module.register("trainInfo", {
         const interval = () => {
             self.sendNotification("faceRecogniton", {isUserDetected : false, isUserKnown : false, name : "名無し"});
         };
+        */
 	},
-	/*
-    getTemplate: function () {
-        return "trainInfo.njk";
-	},
-    */
     
 	getDom: function () {
         if(!this.config.show) return document.createElement("div");
@@ -101,10 +99,11 @@ Module.register("trainInfo", {
     },
 
     notificationReceived: function(notification, payload, sender) {
-        Log.info(notification);
         if(notification == "FACE_DETECT"){
-            this.config.show = payload.isDetected;
-            this.updateDom(1000);
+			if(payload.isDetected != this.config.show){
+            	this.config.show = payload.isDetected;
+            	this.updateDom(1000);
+			}
         }
     }
     
