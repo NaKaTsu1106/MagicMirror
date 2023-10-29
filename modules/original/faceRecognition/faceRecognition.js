@@ -22,7 +22,6 @@ Module.register("faceRecognition", {
 
         webSocket.onmessage = function(message){
             var data = JSON.parse(message.data);
-            Log.info(data.isDetected);
             if(data.isDetected){
                 self.config.text = "こんにちは";
                 self.sendNotification("FACE_DETECT", {isDetected : true });
