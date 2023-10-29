@@ -239,3 +239,20 @@ sup {
   border-spacing: 0;
   border-collapse: separate;
 }
+
+
+table {
+  border-collapse: collapse;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-spacing: 0;
+  font-size: 14pt;
+}
+
+td, th {
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-spacing: 0;
+}
