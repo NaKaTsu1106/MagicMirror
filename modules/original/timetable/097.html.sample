@@ -1,0 +1,359 @@
+<table class="table table-bordered classTable">
+    <thead>
+        <tr>
+            <th class="ui-widget-header headerJigen"></th>
+                <th class="ui-widget-header headerYobi">月曜日</th>
+                <th class="ui-widget-header headerYobi">火曜日</th>
+                <th class="ui-widget-header headerYobi">水曜日</th>
+                <th class="ui-widget-header headerYobi">木曜日</th>
+                <th class="ui-widget-header headerYobi">金曜日</th>
+                <th class="ui-widget-header headerYobi">土曜日</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td class="colJigen ui-widget-header">1</td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal">
+                                <div class="fontB">オペレーティングシステムⅡ</div>
+                                    <div class="">上野　洋一郎</div>
+                                <div class=""><span>【千住】2号館2503教室</span>
+                                </div>
+                                    <div class="">1110011801</div>
+                                    <div class="taniSu">2.0単位</div>
+                                <div>
+                                    <div class="noTextIconLine alignRight"><button id="funcForm:j_idt250:0:j_idt259:0:j_idt263:0:j_idt267:0:j_idt287" name="funcForm:j_idt250:0:j_idt259:0:j_idt263:0:j_idt267:0:j_idt287" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only noText" onclick="PrimeFaces.ab({s:&quot;funcForm:j_idt250:0:j_idt259:0:j_idt263:0:j_idt267:0:j_idt287&quot;,p:&quot;funcForm:j_idt250:0:j_idt259:0:j_idt263:0:j_idt267:0:j_idt287&quot;,u:&quot;@none&quot;});return false;" title="シラバス照会画面を表示します。" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-book"></span><span class="ui-button-text ui-c">ui-button</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal">
+                                <div class="fontB">英語演習Ｂ (2021年以前入学生対象・AJ/AD)</div>
+                                    <div class="">山本　梓</div>
+                                <div class=""><span>【千住】5号館5505防音教室</span>
+                                </div>
+                                    <div class="">11L0081506</div>
+                                    <div class="taniSu">1.0単位</div>
+                                <div>
+                                    <div class="noTextIconLine alignRight"><button id="funcForm:j_idt250:0:j_idt259:0:j_idt263:3:j_idt267:0:j_idt287" name="funcForm:j_idt250:0:j_idt259:0:j_idt263:3:j_idt267:0:j_idt287" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only noText" onclick="PrimeFaces.ab({s:&quot;funcForm:j_idt250:0:j_idt259:0:j_idt263:3:j_idt267:0:j_idt287&quot;,p:&quot;funcForm:j_idt250:0:j_idt259:0:j_idt263:3:j_idt267:0:j_idt287&quot;,u:&quot;@none&quot;});return false;" title="シラバス照会画面を表示します。" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-book"></span><span class="ui-button-text ui-c">ui-button</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+            </tr>
+            <tr>
+                <td class="colJigen ui-widget-header">2</td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal">
+                                <div class="fontB">データ形式と演習</div>
+                                    <div class="">小濱　隆司</div>
+                                <div class=""><span>【千住】5号館5402教室</span>
+                                </div>
+                                    <div class="">1110071801</div>
+                                    <div class="taniSu">2.0単位</div>
+                                <div>
+                                    <div class="noTextIconLine alignRight"><button id="funcForm:j_idt250:0:j_idt259:1:j_idt263:0:j_idt267:0:j_idt287" name="funcForm:j_idt250:0:j_idt259:1:j_idt263:0:j_idt267:0:j_idt287" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only noText" onclick="PrimeFaces.ab({s:&quot;funcForm:j_idt250:0:j_idt259:1:j_idt263:0:j_idt267:0:j_idt287&quot;,p:&quot;funcForm:j_idt250:0:j_idt259:1:j_idt263:0:j_idt267:0:j_idt287&quot;,u:&quot;@none&quot;});return false;" title="シラバス照会画面を表示します。" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-book"></span><span class="ui-button-text ui-c">ui-button</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal">
+                                <div class="fontB">挑戦型プロジェクト</div>
+                                    <div class="">阿倍　博信</div>
+                                <div class=""><span>【千住】5号館5911AJ科ネットクラスルーム(A)</span>
+                                </div>
+                                    <div class="">1110233801</div>
+                                    <div class="taniSu">4.0単位</div>
+                                    <div class="sign signClass">複数回</div>
+                                    <div class="sign signClass">複数学期</div>
+                                <div>
+                                    <div class="noTextIconLine alignRight"><button id="funcForm:j_idt250:0:j_idt259:1:j_idt263:1:j_idt267:0:j_idt287" name="funcForm:j_idt250:0:j_idt259:1:j_idt263:1:j_idt267:0:j_idt287" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only noText" onclick="PrimeFaces.ab({s:&quot;funcForm:j_idt250:0:j_idt259:1:j_idt263:1:j_idt267:0:j_idt287&quot;,p:&quot;funcForm:j_idt250:0:j_idt259:1:j_idt263:1:j_idt267:0:j_idt287&quot;,u:&quot;@none&quot;});return false;" title="シラバス照会画面を表示します。" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-book"></span><span class="ui-button-text ui-c">ui-button</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal">
+                                <div class="fontB">オブジェクト指向設計</div>
+                                    <div class="">宮川　治</div>
+                                <div class=""><span>【千住】5号館5401教室</span>
+                                </div>
+                                    <div class="">1110091802</div>
+                                    <div class="taniSu">2.0単位</div>
+                                <div>
+                                    <div class="noTextIconLine alignRight"><button id="funcForm:j_idt250:0:j_idt259:1:j_idt263:3:j_idt267:0:j_idt287" name="funcForm:j_idt250:0:j_idt259:1:j_idt263:3:j_idt267:0:j_idt287" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only noText" onclick="PrimeFaces.ab({s:&quot;funcForm:j_idt250:0:j_idt259:1:j_idt263:3:j_idt267:0:j_idt287&quot;,p:&quot;funcForm:j_idt250:0:j_idt259:1:j_idt263:3:j_idt267:0:j_idt287&quot;,u:&quot;@none&quot;});return false;" title="シラバス照会画面を表示します。" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-book"></span><span class="ui-button-text ui-c">ui-button</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal">
+                                <div class="fontB">ネットワークサービス構築法</div>
+                                    <div class="">小川　猛志</div>
+                                <div class=""><span>【千住】2号館2701教室</span>
+                                </div>
+                                    <div class="">1109971801</div>
+                                    <div class="taniSu">3.0単位</div>
+                                    <div class="sign signClass">複数回</div>
+                                <div>
+                                    <div class="noTextIconLine alignRight"><button id="funcForm:j_idt250:0:j_idt259:1:j_idt263:4:j_idt267:0:j_idt287" name="funcForm:j_idt250:0:j_idt259:1:j_idt263:4:j_idt267:0:j_idt287" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only noText" onclick="PrimeFaces.ab({s:&quot;funcForm:j_idt250:0:j_idt259:1:j_idt263:4:j_idt267:0:j_idt287&quot;,p:&quot;funcForm:j_idt250:0:j_idt259:1:j_idt263:4:j_idt267:0:j_idt287&quot;,u:&quot;@none&quot;});return false;" title="シラバス照会画面を表示します。" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-book"></span><span class="ui-button-text ui-c">ui-button</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+            </tr>
+            <tr>
+                <td class="colJigen ui-widget-header">3</td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal">
+                                <div class="fontB">情報システム工学実験I</div>
+                                    <div class="">小篠　裕子</div>
+                                <div class=""><span>【千住】5号館5911AJ科ネットクラスルーム(A)</span>
+                                </div>
+                                    <div class="">1110211801</div>
+                                    <div class="taniSu">2.0単位</div>
+                                    <div class="sign signClass">複数回</div>
+                                <div>
+                                    <div class="noTextIconLine alignRight"><button id="funcForm:j_idt250:0:j_idt259:2:j_idt263:0:j_idt267:0:j_idt287" name="funcForm:j_idt250:0:j_idt259:2:j_idt263:0:j_idt267:0:j_idt287" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only noText" onclick="PrimeFaces.ab({s:&quot;funcForm:j_idt250:0:j_idt259:2:j_idt263:0:j_idt267:0:j_idt287&quot;,p:&quot;funcForm:j_idt250:0:j_idt259:2:j_idt263:0:j_idt267:0:j_idt287&quot;,u:&quot;@none&quot;});return false;" title="シラバス照会画面を表示します。" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-book"></span><span class="ui-button-text ui-c">ui-button</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal">
+                                <div class="fontB">ネットワークサービス構築法</div>
+                                    <div class="">小川　猛志</div>
+                                <div class=""><span>【千住】2号館2701教室</span>
+                                </div>
+                                    <div class="">1109971801</div>
+                                    <div class="taniSu">3.0単位</div>
+                                    <div class="sign signClass">複数回</div>
+                                <div>
+                                    <div class="noTextIconLine alignRight"><button id="funcForm:j_idt250:0:j_idt259:2:j_idt263:1:j_idt267:0:j_idt287" name="funcForm:j_idt250:0:j_idt259:2:j_idt263:1:j_idt267:0:j_idt287" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only noText" onclick="PrimeFaces.ab({s:&quot;funcForm:j_idt250:0:j_idt259:2:j_idt263:1:j_idt267:0:j_idt287&quot;,p:&quot;funcForm:j_idt250:0:j_idt259:2:j_idt263:1:j_idt267:0:j_idt287&quot;,u:&quot;@none&quot;});return false;" title="シラバス照会画面を表示します。" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-book"></span><span class="ui-button-text ui-c">ui-button</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal">
+                                <div class="fontB">データウェアハウス</div>
+                                    <div class="">前田　高志ニコラス</div>
+                                <div class=""><span>【千住】1号館丹羽ホール</span>
+                                </div>
+                                    <div class="">1110131801</div>
+                                    <div class="taniSu">2.0単位</div>
+                                <div>
+                                    <div class="noTextIconLine alignRight"><button id="funcForm:j_idt250:0:j_idt259:2:j_idt263:3:j_idt267:0:j_idt287" name="funcForm:j_idt250:0:j_idt259:2:j_idt263:3:j_idt267:0:j_idt287" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only noText" onclick="PrimeFaces.ab({s:&quot;funcForm:j_idt250:0:j_idt259:2:j_idt263:3:j_idt267:0:j_idt287&quot;,p:&quot;funcForm:j_idt250:0:j_idt259:2:j_idt263:3:j_idt267:0:j_idt287&quot;,u:&quot;@none&quot;});return false;" title="シラバス照会画面を表示します。" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-book"></span><span class="ui-button-text ui-c">ui-button</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal">
+                                <div class="fontB">挑戦型プロジェクト</div>
+                                    <div class="">阿倍　博信</div>
+                                <div class=""><span>【千住】5号館5911AJ科ネットクラスルーム(A)</span>
+                                </div>
+                                    <div class="">1110233801</div>
+                                    <div class="taniSu">4.0単位</div>
+                                    <div class="sign signClass">複数回</div>
+                                    <div class="sign signClass">複数学期</div>
+                                <div>
+                                    <div class="noTextIconLine alignRight"><button id="funcForm:j_idt250:0:j_idt259:2:j_idt263:4:j_idt267:0:j_idt287" name="funcForm:j_idt250:0:j_idt259:2:j_idt263:4:j_idt267:0:j_idt287" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only noText" onclick="PrimeFaces.ab({s:&quot;funcForm:j_idt250:0:j_idt259:2:j_idt263:4:j_idt267:0:j_idt287&quot;,p:&quot;funcForm:j_idt250:0:j_idt259:2:j_idt263:4:j_idt267:0:j_idt287&quot;,u:&quot;@none&quot;});return false;" title="シラバス照会画面を表示します。" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-book"></span><span class="ui-button-text ui-c">ui-button</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+            </tr>
+            <tr>
+                <td class="colJigen ui-widget-header">4</td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal">
+                                <div class="fontB">情報システム工学実験I</div>
+                                    <div class="">小篠　裕子</div>
+                                <div class=""><span>【千住】5号館5911AJ科ネットクラスルーム(A)</span>
+                                </div>
+                                    <div class="">1110211801</div>
+                                    <div class="taniSu">2.0単位</div>
+                                    <div class="sign signClass">複数回</div>
+                                <div>
+                                    <div class="noTextIconLine alignRight"><button id="funcForm:j_idt250:0:j_idt259:3:j_idt263:0:j_idt267:0:j_idt287" name="funcForm:j_idt250:0:j_idt259:3:j_idt263:0:j_idt267:0:j_idt287" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only noText" onclick="PrimeFaces.ab({s:&quot;funcForm:j_idt250:0:j_idt259:3:j_idt263:0:j_idt267:0:j_idt287&quot;,p:&quot;funcForm:j_idt250:0:j_idt259:3:j_idt263:0:j_idt267:0:j_idt287&quot;,u:&quot;@none&quot;});return false;" title="シラバス照会画面を表示します。" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-book"></span><span class="ui-button-text ui-c">ui-button</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal">
+                                <div class="fontB">分散プログラミング</div>
+                                    <div class="">冬爪　成人</div>
+                                <div class=""><span>【千住】2号館2903教室</span>
+                                </div>
+                                    <div class="">1109961801</div>
+                                    <div class="taniSu">2.0単位</div>
+                                <div>
+                                    <div class="noTextIconLine alignRight"><button id="funcForm:j_idt250:0:j_idt259:3:j_idt263:3:j_idt267:0:j_idt287" name="funcForm:j_idt250:0:j_idt259:3:j_idt263:3:j_idt267:0:j_idt287" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only noText" onclick="PrimeFaces.ab({s:&quot;funcForm:j_idt250:0:j_idt259:3:j_idt263:3:j_idt267:0:j_idt287&quot;,p:&quot;funcForm:j_idt250:0:j_idt259:3:j_idt263:3:j_idt267:0:j_idt287&quot;,u:&quot;@none&quot;});return false;" title="シラバス照会画面を表示します。" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-book"></span><span class="ui-button-text ui-c">ui-button</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+            </tr>
+            <tr>
+                <td class="colJigen ui-widget-header">5</td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+            </tr>
+            <tr>
+                <td class="colJigen ui-widget-header">6</td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+            </tr>
+            <tr>
+                <td class="colJigen ui-widget-header">7</td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+            </tr>
+            <tr>
+                <td class="colJigen ui-widget-header">8</td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+                    <td class="colYobi">
+                            <div class="jugyo-info jugyo-normal noClass">
+                            </div>
+                    </td>
+            </tr>
+    </tbody>
+</table>
