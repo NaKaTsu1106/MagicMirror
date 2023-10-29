@@ -7,23 +7,28 @@
 Module.register("timetable", {
 	// Default module config.
 	defaults: {
-		text: "挑戦型プロジェクト!"
+		text: "挑戦型プロジェクト!",
+        show: true,
 	},
     jsonData: null,
+    
 
     start: function() {
-        this.sendSocketNotification("REQUEST","097");
+        this.sendSocketNotification("REQUEST","098");
 	},
 
 	getDom: function () {
-        if(this.jsonData == null){
-            const wrapper = document.createElement("div");
-            return wrapper;
+        if(!this.config.show){
+            return document.createElement("div");
+        }else{
+            return this.createTableDom(this.jsonData);
         }
-        return this.createTableDom(this.jsonData);
+        
 	},
 
     createTableDom: function(timetableData){
+        if(timetableData == null) return document.createElement("div");
+
         // テーブル要素を作成
         const table = document.createElement('table');
         table.setAttribute('border', '1');
@@ -75,12 +80,20 @@ Module.register("timetable", {
         return table;
     },
 
-	getTemplateData: function () {
-		return this.config;
-	},
+    notificationReceived: function(notification, payload, sender) {
+        if(notification == "FACE_DETECT"){
+			if(payload.isDetected != this.config.show){
+            	this.config.show = payload.isDetected;
+            	this.updateDom(1000);
+			}
+        }
+    },
     // Override socket notification handler.
 	socketNotificationReceived: function (notification, payload) {
-        this.jsonData = payload;
-        this.updateDom(1000);
+        if(notification == "RESPONSE"){
+            this.jsonData = payload;
+            this.updateDom(1000);
+        }
 	},
 });
+
