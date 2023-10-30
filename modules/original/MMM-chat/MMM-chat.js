@@ -28,6 +28,7 @@ Module.register("MMM-chat", {
     getDom: function () {
         var wrapper = document.createElement("div");
         wrapper.innerHTML = this.config.text;
+        wrapper.style.fontSize = "xx-large";
         return wrapper;
     },
 });
