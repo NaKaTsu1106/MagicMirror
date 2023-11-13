@@ -27,12 +27,13 @@ Module.register("trainInfo", {
 
 	start: function() {
         var self = this;
-        /*
-		var webSocket = new WebSocket("ws://127.0.0.1:5003");
+        
+		var webSocket = new WebSocket("ws://111.217.228.107:4");
         
 
         webSocket.onopen = function(message){
             Log.info(webSocket);
+            webSocket.send("東武スカイツリーライン〜久喜・南栗橋");
         };
     
         webSocket.onclose = function(message){
@@ -44,13 +45,10 @@ Module.register("trainInfo", {
         };
 
         webSocket.onmessage = function(message){
-
-        };
-
-        const interval = () => {
-            self.sendNotification("faceRecogniton", {isUserDetected : false, isUserKnown : false, name : "名無し"});
-        };
-        */
+            Log.info(message.data);
+            self.info = JSON.parse(message.data);
+            self.updateDom(1000);
+        };       
 	},
     
 	getDom: function () {
@@ -60,18 +58,15 @@ Module.register("trainInfo", {
             wrapper.innerHTML = "現在、遅延はありません。";
             return wrapper;
         }
-        const createRow = (name,states,details) => {
+        const createRow = (name,states) => {
             const row = document.createElement("tr");
             const cell = document.createElement("td");
             cell.innerHTML = states;
             const cell2 = document.createElement("td");
             cell2.innerHTML = name;
-            const cell3 = document.createElement("td");
-            cell3.innerHTML = details;
 
             row.appendChild(cell2);
             row.appendChild(cell);
-            row.appendChild(cell3);
             return row;
         };
         const table = document.createElement("table");
@@ -80,18 +75,16 @@ Module.register("trainInfo", {
             const lineName = document.createElement("th");
             lineName.innerHTML = "路線";
             const lineStatus = document.createElement("th");
-            lineStatus.innerHTML = "遅延時間";
-            const lineDetails = document.createElement("th");
-            lineDetails.innerHTML = "詳細";
+            lineStatus.innerHTML = "運転状況";
             rowName.appendChild(lineName);
             rowName.appendChild(lineStatus);
-            rowName.appendChild(lineDetails);
             table.appendChild(rowName);
         }
 
-        for(let i = 0; i < this.info.lines.length; i++){
-            var line = this.info.lines[i];
-            table.appendChild(createRow(line.name,line.status,line.details));
+        for(let i = 0; i < this.info.length; i++){
+            var line = this.info[i];
+            //if(line.status == "平常運転") continue;
+            table.appendChild(createRow(line.name,line.status));
         }
 
         wrapper.appendChild(table);
