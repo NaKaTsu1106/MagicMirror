@@ -21,7 +21,19 @@ Module.register("MMM-chat", {
         };
 
         webSocket.onmessage = function(message){
-
+            Log.info(message);
+            
+            var data = JSON.parse(message.data);
+            Log.info(data);
+            if(data.type == 'CALL'){
+                if(data.name == "train"){
+                    
+                }
+            }
+            if(data.type == 'TEXT'){
+                self.config.text = data.text;
+                self.updateDom(1000);
+            }
         };
 	},
 	

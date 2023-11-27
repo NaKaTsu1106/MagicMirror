@@ -92,9 +92,9 @@ Module.register("trainInfo", {
     },
 
     notificationReceived: function(notification, payload, sender) {
-        if(notification == "FACE_DETECT"){
-			if(payload.isDetected != this.config.show){
-            	this.config.show = payload.isDetected;
+        if(notification == "CALL"){
+			if(payload.name == 'train'){
+            	this.config.show = true;
             	this.updateDom(1000);
 			}
         }
