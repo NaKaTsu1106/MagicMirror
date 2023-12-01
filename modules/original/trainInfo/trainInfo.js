@@ -28,27 +28,47 @@ Module.register("trainInfo", {
 	start: function() {
         var self = this;
         
-		var webSocket = new WebSocket("ws://111.217.228.107:4");
+		var webSocket_info = new WebSocket("ws://111.217.228.107:4");
+        var webSocket_MM = new WebSocket("ws://127.0.0.1:5005");
         
 
-        webSocket.onopen = function(message){
-            Log.info(webSocket);
-            webSocket.send("東武スカイツリーライン〜久喜・南栗橋");
+        webSocket_info.onopen = function(message){
+            Log.info(webSocket_info);
+            webSocket_info.send("東武スカイツリーライン〜久喜・南栗橋");
         };
     
-        webSocket.onclose = function(message){
+        webSocket_info.onclose = function(message){
             Log.info("Server Disconnect... OK");
         };
 
-        webSocket.onerror = function(message){
+        webSocket_info.onerror = function(message){
             Log.info("error...");
         };
 
-        webSocket.onmessage = function(message){
+        webSocket_info.onmessage = function(message){
             Log.info(message.data);
             self.info = JSON.parse(message.data);
             self.updateDom(1000);
-        };       
+        }; 
+        
+        webSocket_MM.onopen = function(message){
+            Log.info(webSocket_info);
+            webSocket_MM.send(JSON.stringify({type: 'CONNECT', name: 'train'}));
+        };
+    
+        webSocket_MM.onclose = function(message){
+            Log.info("Server Disconnect... OK");
+        };
+
+        webSocket_MM.onerror = function(message){
+            Log.info("error...");
+        };
+
+        webSocket_MM.onmessage = function(message){
+            Log.info(message.data);
+            self.info = JSON.parse(message.data);
+            self.updateDom(1000);
+        }; 
 	},
     
 	getDom: function () {

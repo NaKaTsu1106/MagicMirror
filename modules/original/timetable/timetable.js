@@ -14,7 +14,27 @@ Module.register("timetable", {
     
 
     start: function() {
-        this.sendSocketNotification("REQUEST","098");
+        this.sendSocketNotification("REQUEST","097");
+
+        var webSocket = new WebSocket("ws://127.0.0.1:5005");
+        var self = this;
+
+        webSocket.onopen = function(message){
+            Log.info(webSocket);
+            webSocket.send(JSON.stringify({type: 'CONNECT', name: 'timetable'}));
+        };
+    
+        webSocket.onclose = function(message){
+            Log.info("Server Disconnect... OK");
+        };
+
+        webSocket.onerror = function(message){
+            Log.info("error...");
+        };
+
+        webSocket.onmessage = function(message){
+            Log.info(message);
+        };
 	},
 
 	getDom: function () {

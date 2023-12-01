@@ -79,6 +79,27 @@ Module.register("weather", {
 
 	// Start the weather module.
 	start: function () {
+		var webSocket = new WebSocket("ws://127.0.0.1:5005");
+		var self = this;
+
+		webSocket.onopen = function(message){
+            Log.info(webSocket);
+            webSocket.send(JSON.stringify({type: 'CONNECT', name: 'weather'}));
+        };
+    
+        webSocket.onclose = function(message){
+            Log.info("Server Disconnect... OK");
+        };
+
+        webSocket.onerror = function(message){
+            Log.info("error...");
+        };
+
+        webSocket.onmessage = function(message){
+            Log.info(message);
+			Log.info(self.weatherProvider.currentWeather());
+        };
+
 		moment.locale(this.config.lang);
 
 		if (this.config.useKmh) {
