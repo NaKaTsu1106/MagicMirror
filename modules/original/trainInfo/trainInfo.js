@@ -28,12 +28,11 @@ Module.register("trainInfo", {
 	start: function() {
         var self = this;
         
-		var webSocket_info = new WebSocket("ws://111.217.228.107:4");
+	    var webSocket_info = new WebSocket("ws://111.217.228.107:4");
         var webSocket_MM = new WebSocket("ws://127.0.0.1:5005");
         
 
         webSocket_info.onopen = function(message){
-            Log.info(webSocket_info);
             webSocket_info.send("東武スカイツリーライン〜久喜・南栗橋");
         };
     
@@ -52,7 +51,7 @@ Module.register("trainInfo", {
         }; 
         
         webSocket_MM.onopen = function(message){
-            Log.info(webSocket_info);
+            Log.info(self.webSocket_info);
             webSocket_MM.send(JSON.stringify({type: 'CONNECT', name: 'train'}));
         };
     
@@ -65,9 +64,11 @@ Module.register("trainInfo", {
         };
 
         webSocket_MM.onmessage = function(message){
-            Log.info(message.data);
-            self.info = JSON.parse(message.data);
-            self.updateDom(1000);
+            var data = JSON.parse(message.data);
+            Log.info(data.type);
+            if(data.type == "CALL"){
+                webSocket_MM.send(JSON.stringify({type: 'RESPONSE',data: JSON.stringify(self.info)}));
+            }
         }; 
 	},
     
@@ -113,10 +114,7 @@ Module.register("trainInfo", {
 
     notificationReceived: function(notification, payload, sender) {
         if(notification == "CALL"){
-			if(payload.name == 'train'){
-            	this.config.show = true;
-            	this.updateDom(1000);
-			}
+            self.webSocket_info.send("AAA");
         }
     }
     
