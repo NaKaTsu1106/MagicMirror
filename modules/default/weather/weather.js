@@ -98,6 +98,9 @@ Module.register("weather", {
         webSocket.onmessage = function(message){
             Log.info(message);
 			Log.info(self.weatherProvider.currentWeather());
+			if(JSON.parse(message.data).type == 'CALL'){
+				webSocket.send(JSON.stringify({type: 'RESPONSR', name: 'weather', data: self.weatherProvider.currentWeather()}));
+			}
         };
 
 		moment.locale(this.config.lang);
