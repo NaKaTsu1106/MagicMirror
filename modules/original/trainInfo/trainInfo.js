@@ -67,7 +67,7 @@ Module.register("trainInfo", {
             var data = JSON.parse(message.data);
             Log.info(data.type);
             if(data.type == "CALL"){
-                webSocket_MM.send(JSON.stringify({type: 'RESPONSE',data: JSON.stringify(self.info)}));
+                webSocket_MM.send(JSON.stringify({type: 'RESPONSE',name:"train",data: JSON.stringify(self.info)}));
             }
         }; 
 	},

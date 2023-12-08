@@ -99,7 +99,7 @@ Module.register("weather", {
             Log.info(message);
 			Log.info(self.weatherProvider.currentWeather());
 			if(JSON.parse(message.data).type == 'CALL'){
-				webSocket.send(JSON.stringify({type: 'RESPONSR', name: 'weather', data: self.weatherProvider.currentWeather()}));
+				webSocket.send(JSON.stringify({type: 'RESPONSE', name: 'weather', data: self.weatherProvider.currentWeather()}));
 			}
         };
 
