@@ -1,4 +1,4 @@
-Module.register("trainInfo", {
+Module.register("MMM-trainInfo", {
 	// Default module config.
 	defaults: {
 		text: "trainInfo",
@@ -52,7 +52,7 @@ Module.register("trainInfo", {
         
         webSocket_MM.onopen = function(message){
             Log.info(self.webSocket_info);
-            webSocket_MM.send(JSON.stringify({type: 'CONNECT', name: 'train'}));
+            webSocket_MM.send(JSON.stringify({type: 'CONNECT', name: self.name}));
         };
     
         webSocket_MM.onclose = function(message){

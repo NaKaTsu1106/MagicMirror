@@ -4,7 +4,7 @@
  * By Michael Teeuw https://michaelteeuw.nl
  * MIT Licensed.
  */
-Module.register("timetable", {
+Module.register("MMM-timeTable", {
 	// Default module config.
 	defaults: {
 		text: "挑戦型プロジェクト!",
@@ -15,13 +15,13 @@ Module.register("timetable", {
 
     start: function() {
         this.sendSocketNotification("REQUEST","097");
-
         var webSocket = new WebSocket("ws://127.0.0.1:5005");
         var self = this;
 
         webSocket.onopen = function(message){
             Log.info(webSocket);
-            webSocket.send(JSON.stringify({type: 'CONNECT', name: 'timetable'}));
+            webSocket.send(JSON.stringify({type: 'CONNECT', name: self.name}));
+            self.hide();
         };
     
         webSocket.onclose = function(message){
@@ -33,9 +33,43 @@ Module.register("timetable", {
         };
 
         webSocket.onmessage = function(message){
-            Log.info(message);
+            self.show();
+            var data = JSON.parse(message.data);
+
+            
+            Log.info(data.type);
+            if(data.type == "CALL"){
+                webSocket.send(JSON.stringify({type: 'RESPONSE',name:"timeTable",data: JSON.stringify(self.extractTimetable(self.jsonData, data.dayNumber))}));
+            }
+            self.updateDom(1000);
         };
 	},
+    extractTimetable :function (data, dayNumber) {
+        // Mapping numbers to days
+        const days = ["月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"];
+        const day = days[dayNumber - 1];
+    
+        // Check if the day number is valid
+        if (!day) {
+            console.error("Invalid day number. Please provide a number from 1 to 6.");
+            return;
+        }
+    
+        // Extracting the timetable for the specified day
+        const timetable = [];
+        data.forEach(period => {
+            const classInfo = period.classes[day];
+            // Only add the class if it exists for that day
+            if (classInfo && classInfo.class_name) {
+                timetable.push({
+                    period: period.period,
+                    class_name: classInfo.class_name,
+                });
+            }
+        });
+    
+        return timetable;
+    },
 
 	getDom: function () {
         if(!this.config.show){

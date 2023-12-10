@@ -1,7 +1,7 @@
 Module.register("MMM-chat", {
 	// Default module config.
 	defaults: {
-		text: "さんぷる",
+		text: "話しかけてください",
 	},
 
 	start: function() {
@@ -11,6 +11,7 @@ Module.register("MMM-chat", {
         webSocket.onopen = function(message){
             Log.info(webSocket);
             webSocket.send(JSON.stringify({type: 'CONNECT', name: 'MMM-chat'}));
+            self.hide();
         };
     
         webSocket.onclose = function(message){
@@ -22,6 +23,7 @@ Module.register("MMM-chat", {
         };
 
         webSocket.onmessage = function(message){
+            self.show();
             Log.info(message);
             var data = JSON.parse(message.data);
             self.config.text = data.text;

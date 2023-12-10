@@ -84,7 +84,7 @@ Module.register("weather", {
 
 		webSocket.onopen = function(message){
             Log.info(webSocket);
-            webSocket.send(JSON.stringify({type: 'CONNECT', name: 'weather'}));
+            webSocket.send(JSON.stringify({type: 'CONNECT', name: self.name}));
         };
     
         webSocket.onclose = function(message){
@@ -99,7 +99,10 @@ Module.register("weather", {
             Log.info(message);
 			Log.info(self.weatherProvider.currentWeather());
 			if(JSON.parse(message.data).type == 'CALL'){
-				webSocket.send(JSON.stringify({type: 'RESPONSE', name: 'weather', data: self.weatherProvider.currentWeather()}));
+				weather_data = {date:self.weatherProvider.currentWeather().date,
+								temperature:self.weatherProvider.currentWeather().temperature,
+								weatherType:self.weatherProvider.currentWeather().weatherType}
+				webSocket.send(JSON.stringify({type: 'RESPONSE', name: 'weather', data: weather_data}));
 			}
         };
 
