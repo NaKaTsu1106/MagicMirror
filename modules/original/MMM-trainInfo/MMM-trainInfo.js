@@ -4,6 +4,7 @@ Module.register("MMM-trainInfo", {
 		text: "trainInfo",
         show: true,
 	},
+    require_info: false,
     info:{
         "status": "遅延あり",
         "lines": [
@@ -47,6 +48,10 @@ Module.register("MMM-trainInfo", {
         webSocket_info.onmessage = function(message){
             Log.info(message.data);
             self.info = JSON.parse(message.data);
+            if(self.require_info){
+                webSocket_MM.send(JSON.stringify({type: 'RESPONSE',name:"train",data: JSON.stringify(self.info)}));
+            }
+            self.require_info = false;
             self.updateDom(1000);
         }; 
         
@@ -64,10 +69,12 @@ Module.register("MMM-trainInfo", {
         };
 
         webSocket_MM.onmessage = function(message){
+            Log.info(message)
             var data = JSON.parse(message.data);
             Log.info(data.type);
             if(data.type == "CALL"){
-                webSocket_MM.send(JSON.stringify({type: 'RESPONSE',name:"train",data: JSON.stringify(self.info)}));
+                self.require_info = true;
+                webSocket_info.send(data.lineName);
             }
         }; 
 	},
