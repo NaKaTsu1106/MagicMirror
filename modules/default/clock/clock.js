@@ -1,5 +1,3 @@
-/* global SunCalc, formatTime */
-
 /* MagicMirror²
  * Module: Clock
  *
@@ -49,6 +47,31 @@ Module.register("clock", {
 	// Define start sequence.
 	start: function () {
 		Log.info(`Starting module: ${this.name}`);
+		Log.info(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+
+		var webSocket = new WebSocket("ws://127.0.0.1:5005");
+        var self = this;
+
+		webSocket.onopen = function(message){
+            Log.info(webSocket);
+            webSocket.send(JSON.stringify({type: 'CONNECT', name: self.name}));
+        };
+    
+        webSocket.onclose = function(message){
+            Log.info("Server Disconnect... OK");
+        };
+
+        webSocket.onerror = function(message){
+            Log.info("error...");
+        };
+
+        webSocket.onmessage = function(message){
+            var data = JSON.parse(message.data);
+            Log.info(data.type);
+            if(data.type == "CALL"){
+                webSocket.send(JSON.stringify({type: 'RESPONSE',name:"timeTable",data: JSON.stringify(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"))}));
+            }
+        };
 
 		// Schedule update interval.
 		this.second = moment().second();
