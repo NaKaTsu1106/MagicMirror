@@ -34,6 +34,7 @@ Module.register("MMM-trainInfo", {
         
 
         webSocket_info.onopen = function(message){
+            Log.info(webSocket_info);
             webSocket_info.send("東武スカイツリーライン〜久喜・南栗橋");
         };
     
