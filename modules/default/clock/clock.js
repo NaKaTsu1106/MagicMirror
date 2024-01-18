@@ -331,9 +331,10 @@ Module.register("clock", {
 	},
 	notificationReceived: function(notification, payload, sender) {
         if(notification == "FACE_DETECT"){
-			if(payload.isDetected != this.config.show){
-            	this.config.show = payload.isDetected;
-            	this.updateDom(1000);
+			if(!payload.isDetected){
+                this.hide();
+            }else{
+				this.show();
 			}
         }
     }

@@ -37,4 +37,11 @@ Module.register("MMM-chat", {
         wrapper.style.fontSize = "xx-large";
         return wrapper;
     },
+    notificationReceived: function(notification, payload, sender) {
+        if(notification == "FACE_DETECT"){
+            if(!payload.isDetected){
+                this.hide();
+            }
+        }
+    },
 });

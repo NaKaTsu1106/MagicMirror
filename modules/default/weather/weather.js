@@ -96,11 +96,12 @@ Module.register("weather", {
         };
 
         webSocket.onmessage = function(message){
+			self.show();
             Log.info(message);
 			Log.info(self.weatherProvider.currentWeather());
 			if(JSON.parse(message.data).type == 'CALL'){
 				weather_data = {date:self.weatherProvider.currentWeather().date,
-								temperature:self.weatherProvider.currentWeather().temperature,
+								temperature:parseInt(self.weatherProvider.currentWeather().temperature),
 								weatherType:self.weatherProvider.currentWeather().weatherType}
 				webSocket.send(JSON.stringify({type: 'RESPONSE', name: 'weather', data: weather_data}));
 			}
@@ -132,9 +133,10 @@ Module.register("weather", {
 	// Override notification handler.
 	notificationReceived: function (notification, payload, sender) {
 		if(notification == "FACE_DETECT"){
-			if(payload.isDetected != this.config.show){
-            	this.config.show = payload.isDetected;
-            	this.updateDom(1000);
+			if(!payload.isDetected){
+                this.hide();
+            }else{
+				this.show();
 			}
         }
 		if (notification === "CALENDAR_EVENTS") {

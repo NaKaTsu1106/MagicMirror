@@ -136,10 +136,7 @@ Module.register("MMM-timeTable", {
 
     notificationReceived: function(notification, payload, sender) {
         if(notification == "FACE_DETECT"){
-			if(payload.isDetected != this.config.show){
-            	this.config.show = payload.isDetected;
-            	this.updateDom(1000);
-			}
+            this.hide();
         }
     },
     // Override socket notification handler.

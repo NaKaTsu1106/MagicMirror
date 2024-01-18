@@ -59,6 +59,7 @@ Module.register("MMM-trainInfo", {
         webSocket_MM.onopen = function(message){
             Log.info(self.webSocket_info);
             webSocket_MM.send(JSON.stringify({type: 'CONNECT', name: self.name}));
+            self.hide();
         };
     
         webSocket_MM.onclose = function(message){
@@ -70,6 +71,7 @@ Module.register("MMM-trainInfo", {
         };
 
         webSocket_MM.onmessage = function(message){
+            self.show();
             Log.info(message)
             var data = JSON.parse(message.data);
             Log.info(data.type);
@@ -121,9 +123,11 @@ Module.register("MMM-trainInfo", {
     },
 
     notificationReceived: function(notification, payload, sender) {
-        if(notification == "CALL"){
-            self.webSocket_info.send("AAA");
+        if(notification == "FACE_DETECT"){
+            if(!payload.isDetected){
+                this.hide();
+            }
         }
-    }
+    },
     
 });

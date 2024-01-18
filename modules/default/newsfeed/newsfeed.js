@@ -72,6 +72,32 @@ Module.register("newsfeed", {
 	start: function () {
 		Log.info(`Starting module: ${this.name}`);
 
+		var webSocket = new WebSocket("ws://127.0.0.1:5005");
+		var self = this;
+
+		webSocket.onopen = function(message){
+            Log.info(webSocket);
+            webSocket.send(JSON.stringify({type: 'CONNECT', name: self.name}));
+        };
+    
+        webSocket.onclose = function(message){
+            Log.info("Server Disconnect... OK");
+        };
+
+        webSocket.onerror = function(message){
+            Log.info("error...");
+        };
+
+        webSocket.onmessage = function(message){
+			Log.info(self.newsItems);
+			self.show();
+            Log.info(message);
+			if(JSON.parse(message.data).type == 'CALL'){
+				topic_data = [];
+				webSocket.send(JSON.stringify({type: 'RESPONSE', name: 'newsfeed', data: self.newsItems[self.activeItem].title}));
+			}
+        };
+
 		// Set locale.
 		moment.locale(config.language);
 
@@ -334,6 +360,14 @@ Module.register("newsfeed", {
 	},
 
 	notificationReceived: function (notification, payload, sender) {
+		if(notification == "FACE_DETECT"){
+            if(!payload.isDetected){
+                this.hide();
+            }else{
+				this.show();
+			}
+        }
+
 		const before = this.activeItem;
 		if (notification === "MODULE_DOM_CREATED" && this.config.hideLoading) {
 			this.hide();
